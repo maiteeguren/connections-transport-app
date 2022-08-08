@@ -96,13 +96,6 @@ const DataSet = {
             direction: "18",
             departure_time_utc: "2019-03-21T02:56:00Z"
         },
-    ],
-    connections: [
-        {
-            id: "1",
-            stops: ["2273", "1071", "31845"],
-            title: "Home Commute"
-        }
     ]
 }
 
