@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 export default function List({ connections }) {
   const navigate = useNavigate();
 
-  const handleClick = (id: string) => {
+  const handleClick = (id) => {
     navigate(`/connection/${id}`);
   };
 

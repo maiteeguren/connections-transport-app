@@ -10,13 +10,13 @@ export default function ConnectionsList({ onAddConnection, length }) {
   const [stops, setStops] = useState([]);
   const navigate = useNavigate();
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     onAddConnection({ id: (length + 1).toString(), title, stops });
     navigate("/");
   };
 
-  const handleChangeStops = (value: string, index: number) => {
+  const handleChangeStops = (value, index) => {
     const newStops = [...stops];
     newStops[index] = value;
     setStops(newStops);
