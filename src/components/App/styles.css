@@ -1,0 +1,24 @@
+.App {
+  background: rgba(0,0,0,0.1);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-frame {
+  height: 700px;
+  width: 350px;
+  border-radius: 30px;
+  background: white;
+  padding: 20px;
+}
+
+.mobile-screen {
+  border: 1px solid rgba(0,0,0,0.1);
+  height: -webkit-fill-available;
+  padding: 20px;
+  position: relative;
+  padding: 50px 20px;
+}

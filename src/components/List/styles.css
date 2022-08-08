@@ -1,0 +1,19 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  padding-left: 0 !important;
+}
+
+.new-connection-button {
+  margin-top: 20px;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: -webkit-fill-available;
+}
