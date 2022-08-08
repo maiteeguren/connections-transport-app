@@ -5,14 +5,14 @@ import Button from "@mui/material/Button";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
 
-export default function ConnectionsList({ onChange, length }) {
+export default function ConnectionsList({ onAddConnection, length }) {
   const [title, setTitle] = useState("");
   const [stops, setStops] = useState([]);
   const navigate = useNavigate();
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    onChange({ id: (length + 1).toString(), title, stops });
+    onAddConnection({ id: (length + 1).toString(), title, stops });
     navigate("/");
   };
 

@@ -9,7 +9,7 @@ import DataSet from "../../constants";
 export default function App() {
   const [connections, setConnections] = useState(DataSet.connections);
 
-  const handleChange = (newConnection) => {
+  const handleAddConnection = (newConnection) => {
     setConnections([...connections, newConnection]);
   };
 
@@ -23,7 +23,7 @@ export default function App() {
               <Route path="/" element={<List connections={connections} />} />
               <Route
                 path="/new"
-                element={<ConnectionForm onChange={handleChange} length={connections.length} />}
+                element={<ConnectionForm onAddConnection={handleAddConnection} length={connections.length} />}
               />
               <Route path="/connection/:id" element={<Overview connections={connections} />} />
             </Routes>
