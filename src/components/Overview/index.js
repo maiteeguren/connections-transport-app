@@ -4,7 +4,6 @@ import DataSet from "../../constants";
 import "../App/styles.css";
 import "./styles.css";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
 import TramIcon from "@mui/icons-material/Tram";
 import DirectionsRailwayIcon from "@mui/icons-material/DirectionsRailway";
@@ -41,6 +40,8 @@ function StopInformation({ stop }) {
   const stopDepartures = departuresList.filter(
     (departure) => departure.stop_id === stop.id
   );
+  const routes = DataSet.routes
+  const direction = routes.find(route => route.id === stopDepartures[0].route_id).directions[stopDepartures[0].direction]
 
   const icons = {
     bus: <DirectionsBusIcon />,
@@ -51,7 +52,10 @@ function StopInformation({ stop }) {
   return (
     <ListItem className="stop-item">
       <div className="mr-10">{icons[stop.mode]}</div>
-      <div className="mr-10">{stop?.title}</div>
+      <div className="mr-10">
+        <div className="size-14">{stop?.title}</div>
+        <div className="size-10">Towards {direction}</div>
+      </div>
       <div className="departures-wrapper">
         {stopDepartures.map((departure) => (
           <div className="departure-item">
